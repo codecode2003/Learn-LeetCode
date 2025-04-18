@@ -1,0 +1,35 @@
+Dãy số count-and-say là một dãy các chuỗi số được xác định theo công thức đệ quy như sau:
+
+countAndSay(1) = "1"
+
+countAndSay(n) là kết quả nén theo phương pháp run-length encoding (RLE) của countAndSay(n - 1).
+
+Run-length encoding (RLE) là một phương pháp nén chuỗi, bằng cách thay thế các ký tự giống nhau liên tiếp (xuất hiện từ 2 lần trở lên) bằng ký tự đó và số lần xuất hiện liên tiếp.
+Ví dụ: nén chuỗi "3322251" ta thực hiện như sau:
+
+"33" → "23"
+"222" → "32"
+"5" → "15"
+"1" → "11"
+Kết quả chuỗi sau khi nén là "23321511".
+
+Cho một số nguyên dương n, hãy trả về phần tử thứ n trong dãy count-and-say.
+Ví dụ 1:
+Input: n = 4
+Output: "1211"
+Giải thích:
+    countAndSay(1) = "1"
+    countAndSay(2) = RLE of "1" = "11"
+    countAndSay(3) = RLE of "11" = "21"
+    countAndSay(4) = RLE of "21" = "1211"
+
+Ví dụ 2:
+Input: n = 1
+Output: "1"
+Giải thích: Đây là trường hợp cơ bản ban đầu.
+
+Ràng buộc:
+1 <= n <= 30
+
+Gợi ý mở rộng:
+Bạn có thể giải bài toán này bằng cách lặp thay vì dùng đệ quy không?
