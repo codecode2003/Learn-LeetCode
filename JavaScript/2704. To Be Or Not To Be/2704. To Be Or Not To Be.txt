@@ -1,0 +1,30 @@
+2704. Tồn tại hay không tồn tại (To Be Or Not To Be)
+Mức độ: Dễ
+
+Viết một hàm expect giúp các lập trình viên kiểm thử (test) mã nguồn của họ. Hàm này sẽ nhận vào một giá trị bất kỳ val và trả về một đối tượng có 2 hàm sau:
+toBe(val) nhận vào một giá trị khác và trả về true nếu hai giá trị bằng nhau (===). Nếu không bằng nhau, nó sẽ ném ra lỗi "Not Equal".
+notToBe(val) nhận vào một giá trị khác và trả về true nếu hai giá trị khác nhau (!==). Nếu bằng nhau, nó sẽ ném ra lỗi "Equal".
+
+Ví dụ 1:
+Input:
+func = () => expect(5).toBe(5)
+Output:
+{"value": true}
+Giải thích:
+5 === 5 nên biểu thức này trả về true.
+
+Ví dụ 2:
+Input:
+func = () => expect(5).toBe(null)
+Output:
+{"error": "Not Equal"}
+Giải thích:
+5 !== null nên biểu thức này sẽ ném lỗi "Not Equal".
+
+Ví dụ 3:
+Input:
+func = () => expect(5).notToBe(null)
+Output:
+{"value": true}
+Giải thích:
+5 !== null nên biểu thức này trả về true.
