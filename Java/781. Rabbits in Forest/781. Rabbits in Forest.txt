@@ -1,0 +1,27 @@
+781. Thỏ trong rừng
+Mức độ: Trung bình
+
+Có một khu rừng với số lượng thỏ chưa xác định. Chúng ta đã hỏi n con thỏ câu hỏi:
+"Có bao nhiêu con thỏ khác có cùng màu lông với bạn?"
+và thu thập câu trả lời trong một mảng số nguyên answers, trong đó answers[i] là câu trả lời của con thỏ thứ i.
+
+Cho mảng answers, hãy trả về số lượng thỏ ít nhất có thể có trong khu rừng.
+
+Ví dụ 1:
+Input: answers = [1,1,2]
+Output: 5
+
+Giải thích:
+Hai con thỏ trả lời "1" có thể cùng màu, ví dụ như màu đỏ.
+Con thỏ trả lời "2" không thể là màu đỏ, vì nếu vậy thì số lượng thỏ màu đỏ sẽ không đúng với câu trả lời.
+Giả sử con thỏ trả lời "2" là màu xanh dương.
+Khi đó phải có thêm 2 con thỏ màu xanh dương khác trong rừng mà không tham gia trả lời.
+Như vậy, số lượng thỏ ít nhất trong rừng là 5: 3 con đã trả lời + 2 con chưa trả lời.
+
+Ví dụ 2:
+Input: answers = [10,10,10]
+Output: 11
+
+Ràng buộc:
+1 <= answers.length <= 1000
+0 <= answers[i] < 1000
