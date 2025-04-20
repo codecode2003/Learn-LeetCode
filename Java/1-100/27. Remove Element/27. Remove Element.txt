@@ -1,0 +1,43 @@
+27. Xoá phần tử
+Độ khó: Dễ
+
+Đề bài:
+Cho một mảng số nguyên nums và một số nguyên val. Hãy xóa tất cả các phần tử có giá trị bằng val trong mảng nums, ngay trên chính mảng đó (in-place). Thứ tự các phần tử còn lại có thể thay đổi.
+Sau đó, trả về số lượng phần tử còn lại trong mảng nums mà khác val.
+
+Yêu cầu để được chấp nhận:
+Giả sử số phần tử khác val trong mảng là k, bạn cần thực hiện các yêu cầu sau:
+Thay đổi mảng nums sao cho k phần tử đầu tiên chứa toàn bộ các phần tử khác val.
+Các phần tử sau k không quan trọng, có thể là gì cũng được.
+Trả về k.
+
+Cách hệ thống kiểm tra lời giải của bạn (Custom Judge):
+Hệ thống sẽ kiểm tra lời giải của bạn bằng đoạn mã sau:
+int[] nums = [...]; // Mảng đầu vào
+int val = ...; // Giá trị cần xoá
+int[] expectedNums = [...]; // Kết quả mong đợi (chỉ chứa các giá trị khác val)
+
+int k = removeElement(nums, val); // Gọi hàm bạn cài đặt
+
+assert k == expectedNums.length;
+sort(nums, 0, k); // Sắp xếp k phần tử đầu của nums
+for (int i = 0; i < k; i++) {
+    assert nums[i] == expectedNums[i];
+}
+
+Nếu tất cả các assert đều đúng thì lời giải của bạn sẽ được chấp nhận.
+
+Ví dụ 1:
+Input: nums = [3,2,2,3], val = 3
+Output: 2, nums = [2,2,_,_]
+Giải thích: Trả về k = 2, với hai phần tử đầu của nums là 2. Các phần còn lại _ không quan trọng.
+
+Ví dụ 2:
+Input: nums = [0,1,2,2,3,0,4,2], val = 2
+Output: 5, nums = [0,1,4,0,3,_,_,_]
+Giải thích: Trả về k = 5, với năm phần tử đầu là 0, 1, 4, 0, 3 (thứ tự không quan trọng). Phần còn lại không cần xét.
+
+Ràng buộc:
+0 <= nums.length <= 100
+0 <= nums[i] <= 50
+0 <= val <= 100
