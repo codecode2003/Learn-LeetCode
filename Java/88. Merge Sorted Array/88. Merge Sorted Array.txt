@@ -1,0 +1,43 @@
+88. Gộp Mảng Đã Sắp Xếp (Merge Sorted Array)
+Mức độ: Dễ
+
+Bạn được cung cấp hai mảng số nguyên nums1 và nums2, cả hai đều được sắp xếp theo thứ tự không giảm.
+Ngoài ra, bạn cũng được cung cấp hai số nguyên m và n, tương ứng là số lượng phần tử thực sự có trong nums1 và nums2.
+
+Yêu cầu: Gộp nums2 vào nums1 thành một mảng đã được sắp xếp theo thứ tự không giảm.
+Lưu ý rằng kết quả không được trả về dưới dạng mảng mới, mà phải lưu trực tiếp vào trong nums1.
+
+Để đảm bảo đủ chỗ chứa kết quả, nums1 có độ dài là m + n, trong đó:
+m phần tử đầu tiên là phần tử thực sự cần gộp.
+n phần tử cuối cùng là số 0 (giá trị giả) và cần bị bỏ qua khi gộp.
+nums2 có độ dài là n.
+
+Ví dụ 1:
+Input: nums1 = [1,2,3,0,0,0], m = 3, nums2 = [2,5,6], n = 3  
+Output: [1,2,2,3,5,6]
+Giải thích: Mảng cần gộp là [1,2,3] và [2,5,6].
+Kết quả sau khi gộp là [1,2,2,3,5,6].
+
+Ví dụ 2:
+Input: nums1 = [1], m = 1, nums2 = [], n = 0  
+Output: [1]  
+Giải thích: Mảng cần gộp là [1] và [].  
+Kết quả sau khi gộp là [1].
+
+Ví dụ 3:
+Input: nums1 = [0], m = 0, nums2 = [1], n = 1  
+Output: [1]  
+Giải thích: Mảng cần gộp là [] và [1].  
+Kết quả sau khi gộp là [1].
+
+Lưu ý: Vì m = 0 nên nums1 không có phần tử thực sự nào. Số 0 chỉ có mặt để đảm bảo kích thước của mảng đủ chứa kết quả.
+
+Ràng buộc:
+nums1.length == m + n
+nums2.length == n
+0 <= m, n <= 200
+1 <= m + n <= 200
+-10^9 <= nums1[i], nums2[j] <= 10^9
+
+Gợi ý nâng cao:
+Bạn có thể nghĩ ra thuật toán nào chạy trong thời gian O(m + n) không?
