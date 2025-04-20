@@ -1,0 +1,33 @@
+1768. Trộn Chuỗi Xen Kẽ (Merge Strings Alternately)
+Độ khó: Dễ
+
+Bạn được cho hai chuỗi word1 và word2. Hãy trộn hai chuỗi này bằng cách xen kẽ từng ký tự một, bắt đầu từ word1. Nếu một chuỗi dài hơn chuỗi còn lại, hãy nối phần còn lại của chuỗi đó vào cuối chuỗi kết quả.
+Trả về chuỗi sau khi đã trộn.
+
+Ví dụ:
+Ví dụ 1:
+Input: word1 = "abc", word2 = "pqr"
+Output: "apbqcr"
+
+Giải thích: Chuỗi sau khi trộn sẽ như sau:
+word1: a b c
+word2: p q r
+merged: a p b q c r
+
+Ví dụ 2:
+Input: word1 = "ab", word2 = "pqrs"
+Output: "apbqrs"
+
+Giải thích: Vì word2 dài hơn nên "rs" được nối vào cuối.
+word1: a b
+word2: p q r s
+merged: a p b q r s
+
+Ví dụ 3:
+Input: word1 = "abcd", word2 = "pq"
+Output: "apbqcd"
+
+Giải thích: Vì word1 dài hơn nên "cd" được nối vào cuối.
+word1: a b c d
+word2: p q
+merged: a p b q c d
