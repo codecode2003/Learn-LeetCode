@@ -1,0 +1,24 @@
+2667. Tạo hàm Hello World
+Mức độ: Dễ
+
+Yêu cầu:
+Viết một hàm createHelloWorld. Hàm này nên trả về một hàm mới mà luôn luôn trả về chuỗi "Hello World", bất kể đối số truyền vào là gì.
+
+Ví dụ 1:
+Input: args = []
+Output: "Hello World"
+Giải thích:
+const f = createHelloWorld();
+f(); // "Hello World"
+
+Ví dụ 2:
+Input: args = [{}, null, 42]
+Output: "Hello World"
+Giải thích:
+const f = createHelloWorld();
+f({}, null, 42); // "Hello World"
+
+Bất kỳ đối số nào cũng có thể được truyền vào hàm, nhưng kết quả trả về luôn là "Hello World".
+
+Ràng buộc:
+0 <= args.length <= 10
