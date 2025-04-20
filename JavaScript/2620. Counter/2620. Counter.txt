@@ -1,0 +1,33 @@
+2620. Bộ đếm (Counter)
+Đã giải
+Dễ
+
+Yêu cầu:
+Cho một số nguyên n, hãy trả về một hàm đếm (counter function). Hàm đếm này ban đầu trả về n và sau đó mỗi lần gọi tiếp theo sẽ trả về giá trị tăng thêm 1 so với lần trước (n, n + 1, n + 2, ...).
+
+Ví dụ 1:
+Input:
+n = 10  
+["call", "call", "call"]  
+Output:
+[10, 11, 12]  
+Giải thích:
+Lần đầu gọi counter() trả về 10 (chính là n).
+Lần gọi tiếp theo trả về 11 (tăng thêm 1).
+Lần tiếp nữa trả về 12.
+
+Ví dụ 2:
+Input:
+n = -2  
+["call", "call", "call", "call", "call"]
+Output:
+[-2, -1, 0, 1, 2]
+Giải thích:
+Lần đầu gọi trả về -2.
+Mỗi lần gọi sau đó đều tăng thêm 1.
+
+Ràng buộc:
+-1000 <= n <= 1000
+0 <= calls.length <= 1000
+
+Mỗi phần tử trong calls đều là "call"
