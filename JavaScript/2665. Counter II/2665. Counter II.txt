@@ -1,0 +1,36 @@
+2665. Bộ đếm II (Counter II)
+Mức độ: Dễ
+
+Viết một hàm createCounter. Hàm này nhận vào một số nguyên ban đầu init. Nó sẽ trả về một đối tượng chứa ba hàm sau:
+increment() – tăng giá trị hiện tại lên 1 và trả về giá trị mới.
+decrement() – giảm giá trị hiện tại đi 1 và trả về giá trị mới.
+reset() – đặt lại giá trị hiện tại về giá trị ban đầu init và trả về nó.
+
+Ví dụ 1:
+Input:
+init = 5
+calls = ["increment", "reset", "decrement"]
+Output: [6, 5, 4]
+Giải thích:
+const counter = createCounter(5);
+counter.increment(); // trả về 6
+counter.reset();     // trả về 5
+counter.decrement(); // trả về 4
+
+Ví dụ 2:
+Input:
+init = 0
+calls = ["increment", "increment", "decrement", "reset", "reset"]
+Output: [1, 2, 1, 0, 0]
+Giải thích:
+const counter = createCounter(0);
+counter.increment(); // trả về 1
+counter.increment(); // trả về 2
+counter.decrement(); // trả về 1
+counter.reset();     // trả về 0
+counter.reset();     // trả về 0
+
+Ràng buộc:
+-1000 <= init <= 1000
+0 <= calls.length <= 1000
+calls[i] là một trong các chuỗi: "increment", "decrement" hoặc "reset"
