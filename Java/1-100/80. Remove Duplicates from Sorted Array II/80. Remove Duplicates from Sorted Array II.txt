@@ -1,0 +1,34 @@
+80. Xóa Các Phần Tử Trùng Lặp Trong Mảng Đã Sắp Xếp II
+Mức độ: Trung bình
+
+Đề bài:
+Cho một mảng số nguyên nums được sắp xếp theo thứ tự không giảm. Hãy xóa một số phần tử trùng lặp ngay trong mảng sao cho mỗi phần tử chỉ xuất hiện tối đa 2 lần. Thứ tự tương đối giữa các phần tử phải được giữ nguyên.
+Vì trong một số ngôn ngữ lập trình, bạn không thể thay đổi độ dài của mảng, nên kết quả cuối cùng phải được đặt ở phần đầu của mảng nums. Cụ thể, nếu sau khi xóa trùng còn lại k phần tử, thì k phần tử đầu tiên của nums sẽ chứa kết quả. Phần còn lại của mảng không quan trọng.
+Hãy trả về k, số phần tử hợp lệ sau khi xóa, và chỉnh sửa mảng nums tại chỗ (in-place) với bộ nhớ phụ là O(1) (không sử dụng mảng phụ).
+
+Trình chấm sẽ kiểm tra lời giải của bạn như sau:
+int[] nums = [...]; // Mảng đầu vào
+int[] expectedNums = [...]; // Kết quả mong đợi
+
+int k = removeDuplicates(nums); // Gọi hàm của bạn
+
+assert k == expectedNums.length;
+for (int i = 0; i < k; i++) {
+    assert nums[i] == expectedNums[i];
+}
+Nếu tất cả các điều kiện trên đúng, lời giải của bạn sẽ được chấp nhận.
+
+Ví dụ 1:
+Input: nums = [1,1,1,2,2,3]
+Output: 5, nums = [1,1,2,2,3,_]
+Giải thích: Hàm của bạn trả về k = 5. Năm phần tử đầu của `nums` sẽ là [1,1,2,2,3]. Các phần tử sau không quan trọng (_).
+
+Ví dụ 2:
+Input: nums = [0,0,1,1,1,1,2,3,3]
+Output: 7, nums = [0,0,1,1,2,3,3,_,_]
+Giải thích: Hàm của bạn trả về k = 7. Bảy phần tử đầu của `nums` sẽ là [0,0,1,1,2,3,3]. Các phần tử sau không quan trọng.
+
+Ràng buộc:
+1 <= nums.length <= 30_000
+-10^4 <= nums[i] <= 10^4
+Mảng nums được sắp xếp theo thứ tự không giảm.
