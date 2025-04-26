@@ -1,0 +1,29 @@
+2444. Đếm số lượng dãy con có giới hạn cố định
+Độ khó: Khó
+
+Bạn được cho một mảng số nguyên nums và hai số nguyên minK và maxK.
+Một dãy con có giới hạn cố định của nums là một dãy con thỏa mãn các điều kiện sau:
+Giá trị nhỏ nhất trong dãy con bằng minK.
+Giá trị lớn nhất trong dãy con bằng maxK.
+Hãy trả về số lượng dãy con có giới hạn cố định.
+(Lưu ý: Dãy con là một phần liên tiếp của mảng.)
+
+Ví dụ 1:
+Input:
+nums = [1,3,5,2,7,5], minK = 1, maxK = 5
+Output:
+2
+
+Giải thích: Các dãy con có giới hạn cố định là [1,3,5] và [1,3,5,2].
+
+Ví dụ 2:
+Input:
+nums = [1,1,1,1], minK = 1, maxK = 1
+Output:
+10
+
+Giải thích: Mỗi dãy con của nums đều là dãy con có giới hạn cố định. Tổng cộng có 10 dãy con.
+
+Ràng buộc:
+2 <= nums.length <= 10^5
+1 <= nums[i], minK, maxK <= 10^6
